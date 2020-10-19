@@ -25,17 +25,17 @@
 
 ## items
 
-|Column     |Type      |Options                      |
-|-----------|----------|-----------------------------|
-|item_name  |string    |null: false                  |
-|description|string    |null: false                  |
-|category   |integer   |null: false                  |
-|condition  |integer   |null: false                  |
-|fee        |integer   |null: false                  |
-|from       |integer   |null: false                  |
-|days       |integer   |null: false                  |
-|price      |integer   |null: false                  |
-|user_id    |references|null: false,foreign_key: true|
+|Column        |Type      |Options                      |
+|--------------|----------|-----------------------------|
+|item_name     |string    |null: false                  |
+|description   |text      |null: false                  |
+|category_id   |integer   |null: false                  |
+|condition_id  |integer   |null: false                  |
+|fee_id        |integer   |null: false                  |
+|from_id       |integer   |null: false                  |
+|days_id       |integer   |null: false                  |
+|price         |integer   |null: false                  |
+|user          |references|null: false,foreign_key: true|
 ### Association
 - belongs_to :user
 - has_one    :purchase
@@ -45,21 +45,23 @@
 |Column        |Type      |Options                      |
 |--------------|----------|-----------------------------|
 |user          |references|null: false,foreign_key: true|
+|item          |references|null: false,foreign_key: true|
 ### Association
 - has_one    :address
 - belongs_to :user
+- belongs_to :item
 
 
 
 ## addresses
-|Column  |Type      |Options                      |
-|--------|----------|-----------------------------|
-|postal  |string    |null: false                  |
-|province|integer   |null: false                  |
-|city    |string    |null: false                  |
-|street  |string    |null: false                  |
-|building|string    |null: false                  |
-|phone   |string    |null: false                  |
-|purchase|references|null: false,foreign_key: true|
+|Column     |Type      |Options                      |
+|-----------|----------|-----------------------------|
+|postal     |string    |null: false                  |
+|province_id|integer   |null: false                  |
+|city       |string    |null: false                  |
+|street     |string    |null: false                  |
+|building   |string    |                             |
+|phone      |string    |null: false                  |
+|purchase   |references|null: false,foreign_key: true|
 ### Association
 - belongs_to :purchase
