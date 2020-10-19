@@ -1,26 +1,18 @@
 ## users
-|Column  |Type  |Options                 |
-|--------|------|------------------------|
-|nickname|string|null: false             |
-|email   |string|null: false,unique: true|
-|password|string|null: false             |
-### Association
-- has_many :merchandises
-- has_many :purchases
-- has_one  :profile
-
-
-## profiles
 |Column            |Type      |Options                      |
 |------------------|----------|-----------------------------|
+|nickname          |string    |null: false                  |
+|email             |string    |null: false,unique: true     |
+|password          |string    |null: false                  |
 |firstname         |string    |null: false                  |
 |lastname          |string    |null: false                  |
 |firstname_furigana|string    |null: false                  |
 |lastname_furigana |string    |null: false                  |
 |birth             |date      |null: false                  |
 ### Association
-- has_one :user
-
+- has_many :items
+- has_many :purchases
+- has_one  :profile
 
 
 ## items
