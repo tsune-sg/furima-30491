@@ -74,27 +74,27 @@ end
     expect(@item.errors.full_messages).to include("Price must be less than or equal to 9999999")
   end
   it "fromが0では登録できないこと" do
-    @item.from_id = "0"
+    @item.from_id = 0
     @item.valid?
     expect(@item.errors.full_messages).to include("From must be other than 0")
   end
   it "daysが0では登録できないこと" do
-    @item.days_id = "0"
+    @item.days_id = 0
     @item.valid?
     expect(@item.errors.full_messages).to include("Days must be other than 0")
   end
   it "feeが0では登録できないこと" do
-    @item.fee_id = "0"
+    @item.fee_id = 0
     @item.valid?
     expect(@item.errors.full_messages).to include("Fee must be other than 0")
   end
   it "categoryが0では登録できないこと" do
-    @item.category_id = "0"
+    @item.category_id = 0
     @item.valid?
     expect(@item.errors.full_messages).to include("Category must be other than 0")
   end
   it "conditionが0では登録できないこと" do
-    @item.condition_id = "0"
+    @item.condition_id = 0
     @item.valid?
     expect(@item.errors.full_messages).to include("Condition must be other than 0")
   end
