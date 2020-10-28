@@ -12,4 +12,7 @@ class User < ApplicationRecord
           validates :lastname, presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
           validates :firstname_furigana, presence: true, format: {with: /\A[ァ-ヶー－]+\z/ }
           validates :lastname_furigana, presence: true, format: {with: /\A[ァ-ヶー－]+\z/ }
+
+          has_many :items
+          has_many :purchases
 end
