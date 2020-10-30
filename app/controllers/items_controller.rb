@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
   def show
   end
 
+
   def destroy
     @item = Item.find(params[:id])
     if @item.destroy
@@ -17,6 +18,7 @@ class ItemsController < ApplicationController
     end
   end
 
+  
   def new
     @item = Item.new
   end
