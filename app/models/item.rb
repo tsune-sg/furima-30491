@@ -19,7 +19,7 @@ class Item < ApplicationRecord
     validates :condition_id
     validates :fee_id
     validates :from_id
-    validates :days_id
+    validates :day_id
   end
   validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, presence: true
 end

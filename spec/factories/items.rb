@@ -5,7 +5,7 @@ FactoryBot.define do
     description { Faker::Lorem.sentence }
     fee_id { 1 }
     from_id { 1 }
-    days_id { 1 }
+    day_id { 1 }
     category_id { 1 }
     condition_id { 1 }
     association :user

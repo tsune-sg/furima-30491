@@ -46,10 +46,10 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("From can't be blank")
       end
-      it 'daysが空では登録できないこと' do
-        @item.days_id = nil
+      it 'dayが空では登録できないこと' do
+        @item.day_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Days can't be blank")
+        expect(@item.errors.full_messages).to include("Day can't be blank")
       end
       it 'priceが空では登録できないこと' do
         @item.price = nil
@@ -76,10 +76,10 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('From must be other than 0')
       end
-      it 'daysが0では登録できないこと' do
-        @item.days_id = 0
+      it 'dayが0では登録できないこと' do
+        @item.day_id = 0
         @item.valid?
-        expect(@item.errors.full_messages).to include('Days must be other than 0')
+        expect(@item.errors.full_messages).to include('Day must be other than 0')
       end
       it 'feeが0では登録できないこと' do
         @item.fee_id = 0
