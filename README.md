@@ -24,7 +24,7 @@
 |condition_id  |integer   |null: false                  |
 |fee_id        |integer   |null: false                  |
 |from_id       |integer   |null: false                  |
-|days_id       |integer   |null: false                  |
+|day_id       |integer   |null: false                  |
 |price         |integer   |null: false                  |
 |user          |references|null: false,foreign_key: true|
 ### Association
