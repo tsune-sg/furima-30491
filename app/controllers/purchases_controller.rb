@@ -2,7 +2,6 @@ class PurchasesController < ApplicationController
   before_action :authenticate_user!
   before_action :move_to_index, except: [:index, :show]
   def index
-    # @purchase = Purchase.new
     @item = Item.find(params[:item_id])
     @purchase_address = PurchaseAddress.new
     redirect_to root_path if current_user == @item.user
@@ -27,10 +26,6 @@ class PurchasesController < ApplicationController
   end
 
   private
-
-  # def purchase_params
-  # params.permit(:item_id).merge(token: params[:token])
-  # end
 
   def address_params
     params.permit(:postal, :province_id, :city, :street, :building, :phone, :item_id).merge(token: params[:token], user_id: current_user.id)
