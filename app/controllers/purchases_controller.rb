@@ -17,11 +17,6 @@ class PurchasesController < ApplicationController
     end
   end
 
-  def done
-    @item_purchaser = Item.find(params[:item_id])
-    @item_purchaser.update(purchaser_id: current_user.id)
-  end
-
   private
 
   def address_params
