@@ -183,6 +183,17 @@
   margin: 10px 5px 0 0;
 }
 
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+}
+
+.comments a {
+  color: darkgray;
+}
+
 .links {
   display: flex;
   justify-content: space-between;
