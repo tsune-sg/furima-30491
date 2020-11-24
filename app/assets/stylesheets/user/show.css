@@ -68,3 +68,16 @@ div.contents.row div.content_title span.name {
 }
 
 
+.user-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.user-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
