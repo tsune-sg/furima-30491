@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+<div class="contents row">
+  <div class="content_title">
+    <div class='item-contents'>
+      <h2 class='title'><%= @nickname %>さんの出品一覧</h2>
+    </div>
+    <ul class='item-lists'>
+      <% if  @items.present? %>
+        <% @items.each do |item| %>
+          <%= link_to item_path(item.id) do %>
+            <div class="content_post" style="background-image: url(<%= item.image %>);">
+              <span class="name"><%= item.name %></span>
+              <li class='list'>
+                  <div class='item-img-content'>
+                    <%= image_tag item.image, class: "item-img" if item.image.attached? %>
+                  </div>
+                <%# 商品が売れていればsold outを表示しましょう %>
+                <% if item.purchase.present? %>
+                  <div class='sold-out'>
+                    <span>Sold Out!!</span>
+                  </div>
+                <% end %>
+              </li>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%= render "shared/footer" %>
