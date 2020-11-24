@@ -1,5 +1,3 @@
-
-
 div.contents.row div.content_post {
   margin: 20px 0;
   padding: 30px;
@@ -54,12 +52,6 @@ div.contents.row div.content_post span.name span {
   display: block;
 }
 
-
-
-
-
-
-
 div.contents.row div.content_title span.name {
   display: flex;
   margin-top: auto;
@@ -67,14 +59,12 @@ div.contents.row div.content_title span.name {
   font-size: 20px;
 }
 
-
 .user-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 
 .user-lists>.list {
   width: 37vh;
